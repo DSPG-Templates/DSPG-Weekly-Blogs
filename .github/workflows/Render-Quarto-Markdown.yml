@@ -61,6 +61,7 @@ jobs:
         run: |
           echo "ATTEMPTING FILE PUSH"
           cd DSPG-2024/Private-Blog/Assignments/
+          rm -rf ${{ github.event.repository.name }} || true 
           mkdir ${{ github.event.repository.name }}
           cd ${{ github.event.repository.name }}
           cp ../../../../Weekly_Team_Blog.qmd .
